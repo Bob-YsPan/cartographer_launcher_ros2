@@ -14,13 +14,15 @@ A simple tool can launch Cartographer SLAM and save the pgm format map
    ```
    git clone https://github.com/Bob-YsPan/cartographer_launcher_ros2.git cartographer_launcher
    ```
-3. Turning the map resolution (And some parameters if you know how to fine-tuning the parameters)  
+3. Turning the map resolution  
     **Note: some cheap lidar like YDLidar-X4 need to reduce the resolution to hither value like 0.08, to prevent the scan result too light to make map_saver ignort it!**  
    `src/cartographer_launcher/launch/cartographer.launch.py`
    ```
    resolution = LaunchConfiguration('resolution', default='0.08')
    ```
    or you can overwrite the default value at launch!  
+     
+   You can turning others parameters like `src/cartographer_launcher/config/cartographer_2d.lua`, if you know how to fine-tuning it!  
 4. Build package and source it
    ```
    cd ~/<your_ws>/
