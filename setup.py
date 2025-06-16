@@ -19,7 +19,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='osboxes',
+    maintainer='Bob-YsPan',
     maintainer_email='someone@mail.com',
     description='Launch the Cartographer',
     license='Apache-2.0',

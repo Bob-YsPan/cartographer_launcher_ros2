@@ -3,7 +3,6 @@ from rclpy.node import Node
 from nav_msgs.msg import OccupancyGrid
 import numpy as np
 import cv2
-import yaml
 import math
 
 class CartographerMapSaver(Node):
