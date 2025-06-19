@@ -20,7 +20,7 @@ A simple tool can launch Cartographer SLAM and save the pgm format map
    ```
    resolution = LaunchConfiguration('resolution', default='0.08')
    ```
-   This part also need to be adjust to ensure the obstacle's darkness of the map
+   This part also needs to be adjusted to ensure the obstacle's darkness on the map
    `src/cartographer_launcher/config/cartographer_2d.lua`  
    ```
    TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.08
@@ -38,7 +38,8 @@ A simple tool can launch Cartographer SLAM and save the pgm format map
     ```
     ros2 launch cartographer_launcher cartographer.launch.py
     ```
-2. Launch the SLAM without default map resolution
+2. Launch the SLAM without default map resolution  
+    (If you only change this resolution, the signal of obstacles will little lighter, also tuning the config in the Lua is recommended)
     ```
     ros2 launch cartographer_launcher cartographer.launch.py resolution:=0.01
     ```
