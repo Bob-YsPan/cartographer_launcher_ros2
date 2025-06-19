@@ -53,8 +53,8 @@ TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true  -- Whether to
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.occupied_space_weight = 10.
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 1.
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 1.
--- This parameter already at launch file!
--- TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.08
+-- Tuning resolution here and the launch file's parameters to ensure the obstacle darkness of the map
+TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.08
 -- POSE_GRAPH.optimize_every_n_nodes = 70. -- 2 倍的 num_range_data 以上
 -- POSE_GRAPH.constraint_builder.sampling_ratio = 0.3
 -- POSE_GRAPH.constraint_builder.max_constraint_distance = 15.
