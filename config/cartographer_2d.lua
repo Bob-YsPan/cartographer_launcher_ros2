@@ -64,8 +64,8 @@ TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(0.1)  -- Modify
 POSE_GRAPH.constraint_builder.min_score = 0.65  -- Modify 0.55 to 0.65, the minium score of Fast csm, can be optimized above this score 
 POSE_GRAPH.constraint_builder.global_localization_min_score = 0.7  -- Modify 0.6 as 0.7, Minimum global positioning score below which global positioning is considered currently inaccurate
 
--- Try darker the scan:
-TRAJECTORY_BUILDER_2D.submaps.range_data_inserter.probability_grid_range_data_inserter.hit_probability = 0.8
-TRAJECTORY_BUILDER_2D.submaps.range_data_inserter.probability_grid_range_data_inserter.miss_probability = 0.45
+-- The scan dot will be mark or erase:
+TRAJECTORY_BUILDER_2D.submaps.range_data_inserter.probability_grid_range_data_inserter.hit_probability = 0.65    -- default: 0.55
+TRAJECTORY_BUILDER_2D.submaps.range_data_inserter.probability_grid_range_data_inserter.miss_probability = 0.49   -- default: 0.49
 
 return options

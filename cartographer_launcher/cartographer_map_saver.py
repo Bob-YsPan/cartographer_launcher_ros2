@@ -15,8 +15,8 @@ class CartographerMapSaver(Node):
             10
         )
         # Define parameters
-        self.declare_parameter('occupied_thresh', 0.65)
-        self.declare_parameter('free_thresh', 0.25)
+        self.declare_parameter('occupied_thresh', 0.55)
+        self.declare_parameter('free_thresh', 0.45)
         self.declare_parameter('filename', 'map')
         # Parse arguments
         self.p_occupied_thresh = self.get_parameter('occupied_thresh').value
@@ -38,9 +38,9 @@ class CartographerMapSaver(Node):
         for y in range(height):
             for x in range(width):
                 value = data[y, x]
-                if value >= 0 and value < 40:
+                if value >= 0 and value < math.floor(self.p_free_thresh * 100.0):
                     img[y, x] = 254
-                elif value > 50:
+                elif value >= math.floor(self.p_occupied_thresh * 100.0):
                     img[y, x] = 0
                 else:
                     img[y, x] = 205
